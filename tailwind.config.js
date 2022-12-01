@@ -30,10 +30,10 @@ module.exports = {
 			veryDarkGrayishBlue: 'hsl(237, 14%, 26%)',
 		},
 	},
-	variants: {
-		extend: {
-			backgroundImage: ['dark']
-		}
-	},
+	// variants: {
+	// 	extend: {
+	// 		backgroundImage: ['dark']
+	// 	}
+	// },
 	plugins: [],
 };

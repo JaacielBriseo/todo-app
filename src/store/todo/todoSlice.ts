@@ -3,14 +3,12 @@ import { createSlice } from '@reduxjs/toolkit';
 export const todoSlice = createSlice({
 	name: 'todo',
 	initialState: {
-		status: 'checking',
+		todos: [],
 	},
 	reducers: {
-		checkingTodo: (state) => {
-			state.status = 'authenticated'
-		}
+		
 	},
 });
 
 // Action creators are generated for each case reducer function
-export const {checkingTodo} = todoSlice.actions;
+export const {} = todoSlice.actions;
