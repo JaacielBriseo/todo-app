@@ -1,4 +1,4 @@
-import { ThemeToggler } from "../components/ThemeToggler"
+import { ThemeToggler } from "../components"
 
 export const Header = () => {
   return (

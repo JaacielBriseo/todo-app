@@ -1,5 +1,4 @@
-import { NewTodoPanel } from '../components/NewTodoPanel';
-import { TodosPanel } from '../components/TodosPanel';
+import { NewTodoPanel, TodosPanel } from '../components';
 
 export const Panel = () => {
 	return (

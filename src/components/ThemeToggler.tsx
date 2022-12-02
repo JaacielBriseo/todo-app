@@ -1,5 +1,5 @@
 import { moon, sun } from '../assets';
-import { useDarkSide } from '../hooks/useDarkSide';
+import { useDarkSide } from '../hooks';
 
 export const ThemeToggler = () => {
 	const [colorTheme, setTheme] :any = useDarkSide();
