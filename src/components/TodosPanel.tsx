@@ -5,7 +5,7 @@ import { deleteTask, isCompleted } from '../store/todo/todoSlice';
 export const TodosPanel = () => {
 	const todoList = useAppSelector((state) => state.todo.todos);
 	const dispatch = useAppDispatch();
-
+	const todosLength = todoList.filter((todo)=> !todo.completed ).length
 	const toggleCompleted = (id: number) => {
 		dispatch(isCompleted(id));
 	};
@@ -43,7 +43,7 @@ export const TodosPanel = () => {
 				);
 			})}
 			<div className='flex justify-between items-center h-10 text-slate-600'>
-				<span className='text-xs ml-5'>Items left</span>
+				<span className='text-xs ml-5'>{todosLength} Items left</span>
 				<span className='text-xs mr-3'>Clear completed</span>
 			</div>
 		</div>

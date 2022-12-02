@@ -1,5 +1,4 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { stat } from 'fs';
 interface TodoProps {
 	id: number;
 	task: string;
@@ -38,8 +37,11 @@ export const todoSlice = createSlice({
 				state.todos.splice(state.todos.indexOf(foundTask), 1);
 			}
 		},
+		addNewTodo: (state, { payload }) => {
+			state.todos = [{id:state.todos.length , task: payload, completed:false}, ...state.todos];
+		},
 	},
 });
 
 // Action creators are generated for each case reducer function
-export const { isCompleted, deleteTask } = todoSlice.actions;
+export const { isCompleted, deleteTask, addNewTodo } = todoSlice.actions;
