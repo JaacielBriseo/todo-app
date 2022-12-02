@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { useAppDispatch, useAppSelector } from './useReduxTypes';
 import { clearCompleted, deleteTask, isCompleted } from '../store/todo/todoSlice';
 import { check, cross } from '../assets';
+
 export const useTodosPanel = () => {
 	const todoList = useAppSelector((state) => state.todo.todos);
 	const dispatch = useAppDispatch();
@@ -10,13 +11,13 @@ export const useTodosPanel = () => {
 		localStorage.setItem('todos', JSON.stringify(todoList));
 	}, [todoList]);
 
-	const toggleCompleted = (id: number) => {
+	const toggleCompleted = (id: number): void => {
 		dispatch(isCompleted(id));
 	};
-	const deleteTodo = (id: number) => {
+	const deleteTodo = (id: number): void => {
 		dispatch(deleteTask(id));
 	};
-	const removeCompleted = () => {
+	const removeCompleted = (): void => {
 		dispatch(clearCompleted());
 	};
 	return {

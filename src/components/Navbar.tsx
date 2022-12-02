@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router-dom';
 import { TodoRoutes } from '../router/TodoRoutes';
 
-export const Navbar = () => {
+export const Navbar = ():JSX.Element => {
 	let activeStyle = {
 		color: 'hsl(220, 98%, 61%)',
 	};

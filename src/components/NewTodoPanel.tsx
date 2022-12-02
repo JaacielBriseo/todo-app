@@ -1,7 +1,12 @@
 import { useNewTodo } from '../hooks';
+interface NewTodo {
+	onSubmit: (event: React.SyntheticEvent<Element, Event>) => void;
+	onInputChange: (event: React.FormEvent<HTMLInputElement>) => void;
+	newTodo: string;
+}
 
-export const NewTodoPanel = () => {
-	const { onSubmit, newTodo, onInputChange } = useNewTodo();
+export const NewTodoPanel = (): JSX.Element => {
+	const { onSubmit, newTodo, onInputChange }: NewTodo = useNewTodo();
 	return (
 		<form onSubmit={onSubmit} className='relative -top-20 max-w-lg mx-auto h-11 flex justify-center items-center'>
 			<div className='flex items-center justify-start h-10 bg-white dark:bg-veryDarkDesaturatedBlue w-10/12 rounded-lg'>
