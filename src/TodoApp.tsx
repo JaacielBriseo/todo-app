@@ -1,11 +1,16 @@
-import { Header } from './sections/Header';
-import { Panel } from './sections/Panel';
+import { Navbar, NewTodoPanel } from './components';
+import { Header } from './components/Header';
+
 
 export const TodoApp = () => {
 	return (
 		<div className='h-screen bg-veryLightGrayishBlue dark:bg-veryDarkBlue font-josefin'>
 			<Header />
-			<Panel />
+			<NewTodoPanel/>
+			{/* <TodosPanel /> */}
+			{/* <CompletedTodos/> */}
+			{/* <ActiveTodos/> */}
+			<Navbar />
 		</div>
 	);
 };

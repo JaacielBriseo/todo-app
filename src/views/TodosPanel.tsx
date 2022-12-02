@@ -2,6 +2,7 @@ import { useTodosPanel } from '../hooks';
 
 export const TodosPanel = () => {
 	const { todoList, todosLength, toggleCompleted, deleteTodo, check, cross } = useTodosPanel();
+	
 	return (
 		<div className='container relative bottom-16 w-10/12 mx-auto divide-y divide-neutral-700 rounded-lg bg-veryDarkDesaturatedBlue'>
 			{todoList.map(({ task, id, completed }) => {
