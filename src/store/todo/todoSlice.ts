@@ -5,38 +5,8 @@ interface TodoProps {
 	completed: boolean;
 }
 interface TodosTypes extends Array<TodoProps> {}
-const todos: TodosTypes = [
-	{
-		id: 0,
-		task: 'Complete online JavaScript course',
-		completed: true,
-	},
-	{
-		id: 1,
-		task: 'Jog around the park 3x',
-		completed: false,
-	},
-	{
-		id: 2,
-		task: '10 minutes meditation',
-		completed: false,
-	},
-	{
-		id: 3,
-		task: 'Read for 1 hour',
-		completed: false,
-	},
-	{
-		id: 4,
-		task: 'Pick up groceries',
-		completed: false,
-	},
-	{
-		id: 5,
-		task: 'Complete Todo App on Frontend Mentor',
-		completed: false,
-	},
-];
+const todos: TodosTypes = JSON.parse(localStorage.getItem('todos')!) || [];
+
 export const todoSlice = createSlice({
 	name: 'todos',
 	initialState: {

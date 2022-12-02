@@ -15,7 +15,7 @@ export const NewTodoPanel = () => {
 					value={newTodo}
 					onChange={onInputChange}
 					placeholder='Create a new todo...'
-					className='ml-2 outline-none caret-brightBlue dark:bg-veryDarkDesaturatedBlue placeholder:text-darkGrayishBlue placeholder:text-xs'
+					className='ml-2 outline-none caret-brightBlue dark:bg-veryDarkDesaturatedBlue dark:text-white placeholder:text-darkGrayishBlue placeholder:text-xs'
 				/>
 			</div>
 		</form>
