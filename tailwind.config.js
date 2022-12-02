@@ -11,6 +11,8 @@ module.exports = {
 			backgroundImage: {
 				mobLight: "url('assets/bg-mobile-light.jpg')",
 				mobDark: "url('assets/bg-mobile-dark.jpg')",
+				deskLight: "url('assets/bg-desktop-light.jpg')",
+				deskDark: "url('assets/bg-desktop-dark.jpg')",
 			},
 			colors: {
 				brightBlue: 'hsl(220, 98%, 61%)',
