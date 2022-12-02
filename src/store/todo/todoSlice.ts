@@ -40,8 +40,11 @@ export const todoSlice = createSlice({
 		addNewTodo: (state, { payload }) => {
 			state.todos = [{id:state.todos.length , task: payload, completed:false}, ...state.todos];
 		},
+		clearCompleted : (state) => {
+			state.todos = state.todos.filter(todo=> !todo.completed)
+		}
 	},
 });
 
 // Action creators are generated for each case reducer function
-export const { isCompleted, deleteTask, addNewTodo } = todoSlice.actions;
+export const { isCompleted, deleteTask, addNewTodo, clearCompleted } = todoSlice.actions;

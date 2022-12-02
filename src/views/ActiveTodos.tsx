@@ -1,8 +1,9 @@
-import { useTodosPanel } from "../hooks";
+import { PanelFooter } from '../components/PanelFooter';
+import { useTodosPanel } from '../hooks';
 
 export const ActiveTodos = () => {
-	const { todoList, todosLength, toggleCompleted, deleteTodo, check, cross } = useTodosPanel();
-    const activeTodos = todoList.filter(todo => !todo.completed)
+	const { todoList, toggleCompleted, deleteTodo, check, cross } = useTodosPanel();
+	const activeTodos = todoList.filter((todo) => !todo.completed);
 	return (
 		<div className='container relative bottom-16 w-10/12 mx-auto divide-y divide-neutral-700 rounded-lg bg-veryDarkDesaturatedBlue'>
 			{activeTodos.map(({ task, id, completed }) => {
@@ -37,10 +38,7 @@ export const ActiveTodos = () => {
 					</div>
 				);
 			})}
-			<div className='flex justify-between items-center h-10 text-slate-600'>
-				<span className='text-xs ml-5'>{todosLength} Items left</span>
-				<span className='text-xs mr-3'>Clear completed</span>
-			</div>
+			<PanelFooter />
 		</div>
 	);
 };
